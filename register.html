@@ -1,41 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Plag Check Login</title>
-        <link rel="icon" href="images/favicon.png"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"> 
-        <!-- Custom styles for this template -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <form action="plagiarism-checker-ui-master\home-text.html" method="get">
-        <div class="main-signin">
-            <div class="main-signin__head">
-                <link href="css/style.css" rel="stylesheet" type="text/css"/>
-                <p>SIGN IN</p>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Plag Checker Login</title>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Now
             </div>
-            
-            <div class="main-signin__middle">
-                <div class="middle__form">
-                
-                    <input type="text" placeholder="Username" required>
-                    <input type="password" placeholder="Password" required>
-                    <input type="submit" value="Sign In">
-                </div>
+            <div class="title signup">
+               Signup Now
             </div>
-            <div class="main-signin__foot">
-                <div class="foot__left">
-                    <p>Sign In With</p>
-                </div>
-                <div class="foot__right">
-                    <div class="face"><a href="#"><img src="img/fb.png"></a></div>
-                    <div class="twit"><a href="#"><img src="img/tw.png"></a></div>
-                </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
             </div>
-        </form>
-        </div>
-    </body>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form>
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+   </body>
 </html>
